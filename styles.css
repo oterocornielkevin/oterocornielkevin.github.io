@@ -1,0 +1,424 @@
+body, nav{
+    background-color: #1b2a49;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar-dark p.navbar-text {
+    margin-bottom: 0;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.75rem;
+    line-height: inherit;
+    white-space: nowrap;
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar-dark a.nav-link {
+    color: white !important;
+    transition: color 0.5s;
+}
+
+.navbar-dark a.nav-link:hover, .navbar-dark a.nav-link.active  {
+    color: #5970a6 !important;
+}
+
+section {
+    min-height: 95vh;
+}
+
+#aboutme-section {
+    margin-top: 9.5vh;
+    background:#8080ff;
+}
+
+.aboutme-column{
+    min-height: 85vh;
+}
+
+.headshot {
+    max-height: 250px;
+    max-width: 250px;
+    animation: fadeInAnimation 1.5s ease 0.5s 1 forwards;
+    opacity: 0;
+}
+
+.summary {
+    animation: fadeInAnimation 1.5s ease 1s 1 forwards;
+    opacity: 0;
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px grey;
+    transition: color 1s;
+}
+
+.summary-icon:hover {
+    color: #5970a6;
+}
+
+#skills-header {
+    opacity: 0;
+}
+
+#skills-header-underline {
+    opacity: 0;
+}
+
+.skills-header-animation {
+    animation: fadeInAnimation 1.5s ease 0s 1 forwards ;
+}
+
+.skill-item {
+    opacity: 0;
+}
+
+.skill-animation {
+    animation: fadeInAnimation 1s ease 0.5s 1 forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.active {
+    color: #39375b;
+}
+
+.underline {
+    background-color: #39375b;
+    width: 60px;
+    height: 4px;
+}
+
+.skill-item{
+    background-color: #5970a6;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.skill-item i {
+    display: none;
+}
+
+.skill-item p {
+    padding-left: 0.5rem;
+}
+
+#portfolio-section{
+    background:#39375b;
+}
+
+.portfolio-column {
+    max-width: 25rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        padding-bottom: 0;
+    }
+
+    .navbar-dark a.nav-link.active {
+        border-bottom: 3px solid #5970a6;
+    }
+
+    #title {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    #aboutme-nav {
+        animation: fadeInAnimation ease 0.75s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
+
+    #portfolio-nav {
+        animation: fadeInAnimation ease 0.75s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+
+    #contactme-nav {
+        animation: fadeInAnimation ease 0.75s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        opacity: 0;
+    }
+
+    .headshot {
+        max-height: 250px;
+        max-width: 250px;
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        opacity: 0;
+    }
+    
+    .summary {
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+        opacity: 0;
+    }
+
+    #skills-header, #skills-header-underline {
+        animation: fadeInAnimation 1.5s ease 3.5s 1 forwards;
+        opacity: 0;
+    }
+
+    .skill-item {
+        font-size: 1.5rem;
+    }
+
+    .skill-item i {
+        display: inline;
+    }
+    
+    #skill-js {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+        opacity: 0;
+    }
+    
+    #skill-node {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4.3s;
+        opacity: 0;
+    }
+    
+    #skill-html {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4.6s;
+        opacity: 0;
+    }
+    
+    #skill-express {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4.9s;
+        opacity: 0;
+    }
+    
+    #skill-css {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5.2s;
+        opacity: 0;
+    }
+    
+    #skill-python {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5.5s;
+        opacity: 0;
+    }
+    
+    #skill-bootstrap {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5.8s;
+        opacity: 0;
+    }
+    
+    #skill-java {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 6.1s;
+        opacity: 0;
+    }
+    
+    #skill-jquery {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 6.4s;
+        opacity: 0;
+    }
+    
+    #skill-sql {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 6.7s;
+        opacity: 0;
+    }
+
+    #skill-sass {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 7s;
+        opacity: 0;
+    }
+    
+    #skill-mongodb {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 7.3s;
+        opacity: 0;
+    }
+
+    #skill-react {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 7.6s;
+        opacity: 0;
+    }
+
+    #skill-aws {
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 7.9s;
+        opacity: 0;
+    }
+}
+
+.card-img-top {
+    max-height: 250px;
+}
+
+#contactme-section{
+    background: #8080ff;
+    color: white;
+}
+
+#contactme-container {
+    width: 40%;
+    min-width: 300px;
+}
+
+textarea {
+    min-height: 10rem;
+}
+
+.sendmessage {
+    border: 2px solid #5970a6;
+    background-color: #1e1d30;
+    color: #5970a6;
+}
+
+.sendmessage:hover{
+    border-color: white;
+    color: white;
+}
+
+.contactme-input{
+    display: block;
+    background-color: #1e1d30;
+    border: 2px solid #5970a6;
+    color: #5970a6;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
+
+textarea.contactme-input {
+    height: auto;
+}
+
+.contactme-input::placeholder {
+    color: #5970a6;
+    opacity: 1;
+}
+  
+  .contactme-input:-ms-input-placeholder {
+    color: #5970a6;
+}
+  
+  .contactme-input::-ms-input-placeholder {
+    color: #5970a6;
+}
+
+#footer-section{
+    background-color: #1b2a49;
+}
+
+a.btt-icon{
+    color: white;
+}
+
+a.btt-icon:hover{
+    color: #5970a6;
+    transition: color 1s;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.social-icon:hover {
+    color: #5970a6;
+    transition: color 1s;
+}
+
+.hideme {
+    opacity: 0;
+}
+
+.animate-header {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.animate-card {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-form {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-button {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
