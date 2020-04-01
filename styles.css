@@ -63,26 +63,6 @@ section {
     color: #5970a6;
 }
 
-#skills-header {
-    opacity: 0;
-}
-
-#skills-header-underline {
-    opacity: 0;
-}
-
-.skills-header-animation {
-    animation: fadeInAnimation 1.5s ease 0s 1 forwards ;
-}
-
-.skill-item {
-    opacity: 0;
-}
-
-.skill-animation {
-    animation: fadeInAnimation 1s ease 0.5s 1 forwards;
-}
-
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -307,6 +287,10 @@ section {
         animation-delay: 7.9s;
         opacity: 0;
     }
+
+    .hideme {
+        opacity: 0;
+    }
 }
 
 .card-img-top {
@@ -390,10 +374,6 @@ a.btt-icon:hover{
 .social-icon:hover {
     color: #5970a6;
     transition: color 1s;
-}
-
-.hideme {
-    opacity: 0;
 }
 
 .animate-header {
