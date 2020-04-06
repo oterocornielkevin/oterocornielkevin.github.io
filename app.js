@@ -1,93 +1,83 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  // Event handler for setting the active nav-item in the navigation bar.
+  $(window).scroll(function () {
+    const media = window.matchMedia('(min-width: 992px)');
 
-    //Event handler for setting the active nav-item in the navigation bar.
-    $(window).scroll(function() {
+    if (media.matches) {
+      const aboutmeTop = $('#aboutme-section').offset().top;
+      const aboutmeHeight = $('#aboutme-section').outerHeight();
+      const portfolioTop = $('#portfolio-section').offset().top - 71;
+      const portfolioHeight = $('#portfolio-section').outerHeight();
+      const contactmeTop = $('#contactme-section').offset().top - 40;
+      const contactmeHeight = $('#contactme-section').outerHeight();
+      const windowHeight = $(window).height();
+      const windowScroll = $(this).scrollTop();
 
-        let media = window.matchMedia('(min-width: 992px)');
+      // About Me section
+      if (windowScroll > (aboutmeTop + aboutmeHeight - windowHeight)) {
+        if (!$('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').addClass('active');
+        }
+        if ($('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').removeClass('active');
+        }
+        if ($('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').removeClass('active');
+        }
+      }
 
-        if(media.matches){
-                let aboutmeTop = $('#aboutme-section').offset().top,
-                aboutmeHeight = $('#aboutme-section').outerHeight(),
-                portfolioTop = $('#portfolio-section').offset().top - 71,
-                portfolioHeight = $('#portfolio-section').outerHeight(),
-                contactmeTop = $('#contactme-section').offset().top - 40,
-                contactmeHeight = $('#contactme-section').outerHeight(),
-                windowHeight = $(window).height(),
-                windowScroll = $(this).scrollTop();
-
-            //About Me section
-            if(windowScroll > (aboutmeTop + aboutmeHeight - windowHeight)){
-                if(!$('#aboutme-nav').hasClass('active')){
-                    $('#aboutme-nav').addClass('active');
-                } 
-
-                if($('#portfolio-nav').hasClass('active')){
-                    $('#portfolio-nav').removeClass('active');
-                }
-
-                if($('#contactme-nav').hasClass('active')){
-                    $('#contactme-nav').removeClass('active');
-                }
-            }
-            
-            //Portfolio section
-            if(windowScroll > (portfolioTop + portfolioHeight - windowHeight)){
-                if(!$('#portfolio-nav').hasClass('active')){
-                    $('#portfolio-nav').addClass('active');
-                }
-
-                if($('#aboutme-nav').hasClass('active')){
-                    $('#aboutme-nav').removeClass('active');
-                }
-
-                if($('#contactme-nav').hasClass('active')){
-                    $('#contactme-nav').removeClass('active');
-                }
-
-                $('#portfolio-header').addClass('animate-header');
-                $('.card').addClass('animate-card');
-            }
-
-            //Contact Me section
-            if(windowScroll > (contactmeTop + contactmeHeight - windowHeight)){
-                if(!$('#contactme-nav').hasClass('active')){
-                    $('#contactme-nav').addClass('active');
-                }
-
-                if($('#portfolio-nav').hasClass('active')){
-                    $('#portfolio-nav').removeClass('active');
-                }
-
-                if($('#aboutme-nav').hasClass('active')){
-                    $('#aboutme-nav').removeClass('active');
-                }
-
-                $('#contactme-header').addClass('animate-header');
-                $('.contactme-input').addClass('animate-form');
-                $('.sendmessage').addClass('animate-button');
-            }
+      // Portfolio section
+      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight)) {
+        if (!$('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').addClass('active');
+        }
+        if ($('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').removeClass('active');
+        }
+        if ($('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').removeClass('active');
         }
 
-        
-    });
+        $('#portfolio-header').addClass('animate-header');
+        $('.card').addClass('animate-card');
+      }
 
-    //Event handler for clicking the navigation items.
-    $('#navbarSupportedContent li a').click(function(e){
-        let targetHref = $(this).attr('href');
+      // Contact Me section
+      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight)) {
+        if (!$('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').addClass('active');
+        }
+        if ($('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').removeClass('active');
+        }
+        if ($('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').removeClass('active');
+        }
 
-        $('html, body').animate({
-            scrollTop: $(targetHref).offset().top - 65
-        }, 500);
+        $('#contactme-header').addClass('animate-header');
+        $('.contactme-input').addClass('animate-form');
+        $('.sendmessage').addClass('animate-button');
+      }
+    }
+  });
 
-        e.preventDefault();
-    });
+  // Event handler for clicking the navigation items.
+  $('#navbarSupportedContent li a').click(function (e) {
+    const targetHref = $(this).attr('href');
 
-    //Event handler for the back to the top link at the bottom of the page.
-    $('#backtotop').click(function(e){
-        $('html, body').animate({
-            scrollTop: $('#aboutme-section').offset().top - 70
-        }, 1000);
+    $('html, body').animate({
+      scrollTop: $(targetHref).offset().top - 65
+    }, 500);
 
-        e.preventDefault();
-    });
+    e.preventDefault();
+  });
+
+  // Event handler for the back to the top link at the bottom of the page.
+  $('#backtotop').click(function (e) {
+    $('html, body').animate({
+      scrollTop: $('#aboutme-section').offset().top - 70
+    }, 1000);
+
+    e.preventDefault();
+  });
 });
