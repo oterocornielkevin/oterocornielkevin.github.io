@@ -8,8 +8,8 @@ a:hover {
 
 .navbar-dark p.navbar-text {
     margin-bottom: 0;
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     margin-right: 1rem;
     font-size: 1.75rem;
     line-height: inherit;
@@ -61,16 +61,6 @@ section {
 
 .summary-icon:hover {
     color: #5970a6;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .active {
@@ -220,42 +210,12 @@ a.btt-icon:hover{
 
 @media only screen and (min-width: 992px) {
     .navbar {
+        min-height: 67px;
         padding-bottom: 0;
     }
 
     .navbar-dark a.nav-link.active {
         border-bottom: 3px solid #5970a6;
-    }
-
-    #title {
-        animation: fadeInAnimation ease 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        opacity: 0;
-    }
-
-    #aboutme-nav {
-        animation: fadeInAnimation ease 0.75s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 0.5s;
-        opacity: 0;
-    }
-
-    #portfolio-nav {
-        animation: fadeInAnimation ease 0.75s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 1s;
-        opacity: 0;
-    }
-
-    #contactme-nav {
-        animation: fadeInAnimation ease 0.75s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 1.5s;
-        opacity: 0;
     }
 
     .headshot {
@@ -264,7 +224,7 @@ a.btt-icon:hover{
         animation: fadeInAnimation ease 1.5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2s;
+        animation-delay: 0.5s;
         opacity: 0;
     }
     
@@ -272,12 +232,17 @@ a.btt-icon:hover{
         animation: fadeInAnimation ease 1.5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 3s;
+        animation-delay: 1s;
         opacity: 0;
     }
 
-    #skills-header, #skills-header-underline {
-        animation: fadeInAnimation 1.5s ease 3.5s 1 forwards;
+    #skills-header {
+        animation: fadeInSlideRightAnimation 1.5s ease 1.5s 1 forwards;
+        opacity: 0;
+    }
+
+    #skills-header-underline {
+        animation: fadeInSlideLeftAnimation 1.5s ease 1.5s 1 forwards;
         opacity: 0;
     }
 
@@ -290,114 +255,114 @@ a.btt-icon:hover{
     }
     
     #skill-js {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 4s;
+        animation-delay: 2s;
         opacity: 0;
     }
     
     #skill-node {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 4.3s;
+        animation-delay: 2s;
         opacity: 0;
     }
     
     #skill-html {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 4.6s;
+        animation-delay: 2.1s;
         opacity: 0;
     }
     
     #skill-express {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 4.9s;
+        animation-delay: 2.1s;
         opacity: 0;
     }
     
     #skill-css {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 5.2s;
+        animation-delay: 2.2s;
         opacity: 0;
     }
     
     #skill-python {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 5.5s;
+        animation-delay: 2.2s;
         opacity: 0;
     }
     
     #skill-bootstrap {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 5.8s;
+        animation-delay: 2.3s;
         opacity: 0;
     }
     
     #skill-java {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 6.1s;
+        animation-delay: 2.3s;
         opacity: 0;
     }
     
     #skill-jquery {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 6.4s;
+        animation-delay: 2.4s;
         opacity: 0;
     }
     
     #skill-sql {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 6.7s;
+        animation-delay: 2.4s;
         opacity: 0;
     }
 
     #skill-sass {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 7s;
+        animation-delay: 2.5s;
         opacity: 0;
     }
     
     #skill-mongodb {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 7.3s;
+        animation-delay: 2.5s;
         opacity: 0;
     }
 
     #skill-react {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 7.6s;
+        animation-delay: 2.6s;
         opacity: 0;
     }
 
     #skill-aws {
-        animation: fadeInAnimation ease 1s;
+        animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 7.9s;
+        animation-delay: 2.6s;
         opacity: 0;
     }
 
@@ -410,5 +375,51 @@ a.btt-icon:hover{
         display: inline-block;
         padding-left: 1.5rem;
         padding-top: 1rem;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideDownAnimation {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideRightAnimation {
+    0% {
+        transform: translateX(-1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideLeftAnimation {
+    0% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
