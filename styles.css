@@ -67,7 +67,7 @@ section {
     color: #39375b;
 }
 
-.underline {
+#skills-header-underline {
     background-color: #39375b;
     width: 60px;
     height: 4px;
@@ -89,6 +89,12 @@ section {
 
 #portfolio-section{
     background:#39375b;
+}
+
+#portfolio-header-underline {
+    background-color: #FFFFFF;
+    width: 100px;
+    height: 4px;
 }
 
 .portfolio-column {
@@ -181,12 +187,6 @@ a.btt-icon:hover{
     transition: color 1s;
 }
 
-.animate-header {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 .animate-card {
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
@@ -244,6 +244,9 @@ a.btt-icon:hover{
     #skills-header-underline {
         animation: fadeInSlideLeftAnimation 1.5s ease 1.5s 1 forwards;
         opacity: 0;
+        background-color: #39375b;
+        width: 60px;
+        height: 4px;
     }
 
     .skill-item {
@@ -366,6 +369,20 @@ a.btt-icon:hover{
         opacity: 0;
     }
 
+    #portfolio-header-underline {
+        background-color: #FFFFFF;
+        width: 100px;
+        height: 4px;
+        opacity: 0;
+    }
+
+    #contactme-header-underline {
+        background-color: #FFFFFF;
+        width: 100px;
+        height: 4px;
+        opacity: 0;
+    }
+
     .hideme {
         opacity: 0;
     }
@@ -375,6 +392,16 @@ a.btt-icon:hover{
         display: inline-block;
         padding-left: 1.5rem;
         padding-top: 1rem;
+    }
+
+    .animate-header-underline {
+        animation: fadeInSlideLeftAnimation 1.5s ease 0s 1 forwards;
+        opacity: 0;
+    }
+
+    .animate-header {
+        animation: fadeInSlideRightAnimation 1s ease 0s 1 forwards;
+        opacity: 0;
     }
 }
 

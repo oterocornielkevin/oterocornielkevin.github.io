@@ -39,6 +39,7 @@ $(document).ready(function () {
         }
 
         $('#portfolio-header').addClass('animate-header');
+        $('#portfolio-header-underline').addClass('animate-header-underline');
         $('.card').addClass('animate-card');
       }
 
@@ -55,6 +56,7 @@ $(document).ready(function () {
         }
 
         $('#contactme-header').addClass('animate-header');
+        $('#contactme-header-underline').addClass('animate-header-underline');
         $('.contactme-input').addClass('animate-form');
         $('.sendmessage').addClass('animate-button');
       }
