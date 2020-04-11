@@ -93,7 +93,7 @@ section {
 
 #portfolio-header-underline {
     background-color: #FFFFFF;
-    width: 100px;
+    width: 7rem;
     height: 4px;
 }
 
@@ -113,6 +113,12 @@ section {
 #contactme-container {
     width: 40%;
     min-width: 300px;
+}
+
+#contactme-header-underline {
+    background-color: #FFFFFF;
+    width: 9rem;
+    height: 4px;
 }
 
 textarea {
