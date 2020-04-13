@@ -6,9 +6,9 @@ $(document).ready(function () {
     if (media.matches) {
       const aboutmeTop = $('#aboutme-section').offset().top;
       const aboutmeHeight = $('#aboutme-section').outerHeight();
-      const portfolioTop = $('#portfolio-section').offset().top - 71;
+      const portfolioTop = $('#portfolio-section').offset().top;
       const portfolioHeight = $('#portfolio-section').outerHeight();
-      const contactmeTop = $('#contactme-section').offset().top - 40;
+      const contactmeTop = $('#contactme-section').offset().top;
       const contactmeHeight = $('#contactme-section').outerHeight();
       const windowHeight = $(window).height();
       const windowScroll = $(this).scrollTop();
@@ -26,8 +26,15 @@ $(document).ready(function () {
         }
       }
 
+      // Portfolio section fade in
+      if (windowScroll > (portfolioTop - (windowHeight / 1.5))) {
+        $('#portfolio-header').addClass('animate-header');
+        $('#portfolio-header-underline').addClass('animate-header-underline');
+        $('.card').addClass('animate-card');
+      }
+
       // Portfolio section
-      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight)) {
+      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight - 150)) {
         if (!$('#portfolio-nav').hasClass('active')) {
           $('#portfolio-nav').addClass('active');
         }
@@ -37,14 +44,18 @@ $(document).ready(function () {
         if ($('#contactme-nav').hasClass('active')) {
           $('#contactme-nav').removeClass('active');
         }
+      }
 
-        $('#portfolio-header').addClass('animate-header');
-        $('#portfolio-header-underline').addClass('animate-header-underline');
-        $('.card').addClass('animate-card');
+      // Contact Me section fade in
+      if (windowScroll > (contactmeTop - (windowHeight / 1.5))) {
+        $('#contactme-header').addClass('animate-header');
+        $('#contactme-header-underline').addClass('animate-header-underline');
+        $('.contactme-input').addClass('animate-form');
+        $('.sendmessage').addClass('animate-button');
       }
 
       // Contact Me section
-      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight)) {
+      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight - 40)) {
         if (!$('#contactme-nav').hasClass('active')) {
           $('#contactme-nav').addClass('active');
         }
@@ -54,11 +65,6 @@ $(document).ready(function () {
         if ($('#aboutme-nav').hasClass('active')) {
           $('#aboutme-nav').removeClass('active');
         }
-
-        $('#contactme-header').addClass('animate-header');
-        $('#contactme-header-underline').addClass('animate-header-underline');
-        $('.contactme-input').addClass('animate-form');
-        $('.sendmessage').addClass('animate-button');
       }
     }
   });
