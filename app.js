@@ -80,7 +80,7 @@ $(document).ready(function () {
       }
 
       // Portfolio section active
-      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight - 150)) {
+      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight - 300)) {
         if (!$('#portfolio-nav').hasClass('active')) {
           $('#portfolio-nav').addClass('active');
         }
@@ -93,7 +93,7 @@ $(document).ready(function () {
       }
 
       // Contact Me section active
-      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight - 40)) {
+      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight - 300)) {
         if (!$('#contactme-nav').hasClass('active')) {
           $('#contactme-nav').addClass('active');
         }
