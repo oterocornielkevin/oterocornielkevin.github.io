@@ -23,7 +23,7 @@ a:hover {
     transition: color 0.5s;
 }
 
-.navbar-dark a.nav-link:hover, .navbar-dark a.nav-link.active  {
+.navbar-dark a.nav-link.active  {
     color: #5970a6 !important;
 }
 
@@ -222,6 +222,10 @@ a.btt-icon:hover{
 
     .navbar-dark a.nav-link.active {
         border-bottom: 3px solid #5970a6;
+    }
+
+    .navbar-dark a.nav-link:hover{
+        color: #5970a6 !important;
     }
 
     .headshot {

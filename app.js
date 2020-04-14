@@ -2,18 +2,17 @@ $(document).ready(function () {
   // Event handler for setting the active nav-item in the navigation bar.
   $(window).scroll(function () {
     const media = window.matchMedia('(min-width: 992px)');
+    const aboutmeTop = $('#aboutme-section').offset().top;
+    const aboutmeHeight = $('#aboutme-section').outerHeight();
+    const portfolioTop = $('#portfolio-section').offset().top;
+    const portfolioHeight = $('#portfolio-section').outerHeight();
+    const contactmeTop = $('#contactme-section').offset().top;
+    const contactmeHeight = $('#contactme-section').outerHeight();
+    const windowHeight = $(window).height();
+    const windowScroll = $(this).scrollTop();
 
     if (media.matches) {
-      const aboutmeTop = $('#aboutme-section').offset().top;
-      const aboutmeHeight = $('#aboutme-section').outerHeight();
-      const portfolioTop = $('#portfolio-section').offset().top;
-      const portfolioHeight = $('#portfolio-section').outerHeight();
-      const contactmeTop = $('#contactme-section').offset().top;
-      const contactmeHeight = $('#contactme-section').outerHeight();
-      const windowHeight = $(window).height();
-      const windowScroll = $(this).scrollTop();
-
-      // About Me section
+      // About Me section active
       if (windowScroll > (aboutmeTop + aboutmeHeight - windowHeight)) {
         if (!$('#aboutme-nav').hasClass('active')) {
           $('#aboutme-nav').addClass('active');
@@ -33,7 +32,7 @@ $(document).ready(function () {
         $('.card').addClass('animate-card');
       }
 
-      // Portfolio section
+      // Portfolio section active
       if (windowScroll > (portfolioTop + portfolioHeight - windowHeight - 150)) {
         if (!$('#portfolio-nav').hasClass('active')) {
           $('#portfolio-nav').addClass('active');
@@ -54,7 +53,46 @@ $(document).ready(function () {
         $('.sendmessage').addClass('animate-button');
       }
 
-      // Contact Me section
+      // Contact Me section active
+      if (windowScroll > (contactmeTop + contactmeHeight - windowHeight - 40)) {
+        if (!$('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').addClass('active');
+        }
+        if ($('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').removeClass('active');
+        }
+        if ($('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').removeClass('active');
+        }
+      }
+    } else {
+      // About Me section active
+      if (windowScroll > (aboutmeTop + aboutmeHeight - windowHeight)) {
+        if (!$('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').addClass('active');
+        }
+        if ($('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').removeClass('active');
+        }
+        if ($('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').removeClass('active');
+        }
+      }
+
+      // Portfolio section active
+      if (windowScroll > (portfolioTop + portfolioHeight - windowHeight - 150)) {
+        if (!$('#portfolio-nav').hasClass('active')) {
+          $('#portfolio-nav').addClass('active');
+        }
+        if ($('#aboutme-nav').hasClass('active')) {
+          $('#aboutme-nav').removeClass('active');
+        }
+        if ($('#contactme-nav').hasClass('active')) {
+          $('#contactme-nav').removeClass('active');
+        }
+      }
+
+      // Contact Me section active
       if (windowScroll > (contactmeTop + contactmeHeight - windowHeight - 40)) {
         if (!$('#contactme-nav').hasClass('active')) {
           $('#contactme-nav').addClass('active');
