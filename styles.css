@@ -266,7 +266,7 @@ a.btt-icon:hover{
     .skill-item i {
         display: inline;
     }
-    
+
     #skill-js {
         animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
