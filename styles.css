@@ -291,7 +291,7 @@ a.btt-icon:hover{
         opacity: 0;
     }
     
-    #skill-express {
+    #skill-rest {
         animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -315,27 +315,11 @@ a.btt-icon:hover{
         opacity: 0;
     }
     
-    #skill-bootstrap {
-        animation: fadeInSlideRightAnimation ease 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 2.3s;
-        opacity: 0;
-    }
-    
-    #skill-java {
-        animation: fadeInSlideLeftAnimation ease 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-delay: 2.3s;
-        opacity: 0;
-    }
-    
     #skill-jquery {
         animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.4s;
+        animation-delay: 2.3s;
         opacity: 0;
     }
     
@@ -343,15 +327,15 @@ a.btt-icon:hover{
         animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.4s;
+        animation-delay: 2.3s;
         opacity: 0;
     }
-
-    #skill-sass {
+    
+    #skill-react {
         animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.5s;
+        animation-delay: 2.4s;
         opacity: 0;
     }
     
@@ -359,23 +343,23 @@ a.btt-icon:hover{
         animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.5s;
+        animation-delay: 2.4s;
         opacity: 0;
     }
 
-    #skill-react {
+    #skill-machine-learning {
         animation: fadeInSlideRightAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.6s;
+        animation-delay: 2.5s;
         opacity: 0;
     }
-
+    
     #skill-aws {
         animation: fadeInSlideLeftAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        animation-delay: 2.6s;
+        animation-delay: 2.5s;
         opacity: 0;
     }
 
