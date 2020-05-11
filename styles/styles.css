@@ -86,10 +86,6 @@ section {
   font-size: 1.25rem;
 }
 
-.skill-item i {
-  display: none;
-}
-
 .skill-item p {
   padding-left: 0.5rem;
 }
@@ -357,9 +353,6 @@ a.btt-icon {
   }
   .skill-item {
     font-size: 1.5rem;
-  }
-  .skill-item i {
-    display: inline;
   }
   #skill-js {
     -webkit-animation: fadeInSlideRightAnimation 1s ease 2s 1 forwards;
